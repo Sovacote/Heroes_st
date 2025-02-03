@@ -21,8 +21,7 @@ public class UnitTargetPathFinderImpl implements UnitTargetPathFinder {
     private static final int[][] DIRECTIONS = {{-1, 0}, {1, 0}, {0, -1}, {0, 1}};
 
     // Сложность: O(n * m * log(n * m)). (n - ширина, m - высота поля)
-    // Можно сделать через графы, но не сегодня :)
-    @Override
+     @Override
     public List<Edge> getTargetPath(Unit attackUnit, Unit targetUnit, List<Unit> existingUnitList) {
         int[][] distance = initializeDistanceArray();
         boolean[][] visited = new boolean[WIDTH][HEIGHT];
